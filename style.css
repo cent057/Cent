@@ -1,0 +1,141 @@
+@import url(reset.css);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:regular,500,600,700,800,900,italic,500italic,600italic,700italic,800italic,900italic);
+*{
+    font-family: "Playfair Display", serif;
+}
+body {
+    font-family: 'Italic';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    width: 1440;
+    margin: 0;
+    background: linear-gradient(to bottom right, #aaffcc, #ff66b2);
+}
+
+#question {
+    padding: 20px;
+    font-size: 24px;
+}
+
+#answers {
+    
+    display: flex;
+    gap: 10px;
+}
+
+#answer-yes, #answer-no {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+    user-select: none;
+    border: none;
+    width: 100px;
+    border-radius: 5px;
+    background-color: #cc40fb;
+    color: white;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#answer-yes:hover, #answer-no:hover {
+    background-color: #e028e7;
+}
+
+#popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+/* Добавьте следующие стили */
+
+#valentine-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 100px;
+    width: 1440px;
+    height: 100vh;
+    position: relative;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+#popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#question {
+    padding: 20px;
+    font-size: 36px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    text-align: center;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Ваши текущие стили */
+
+#popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#valentine-content {
+    max-width: 100%; /* Чтобы изображение влезло в окно */
+    height: auto; /* Поддержка соотношения сторон */
+    opacity: 0; /* Начальная непрозрачность */
+    transition: opacity 1s ease-in-out;
+}
+
+#popup.popup-appear {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Добавленные стили для всплывающего окна */
+
+.gif{
+    width: 250px;
+    height: 250px;
+}
+.questions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
